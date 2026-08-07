@@ -17,7 +17,14 @@ import type { ExtensionAPI } from "@earendil-works/pi-coding-agent";
 
 const ZEN_BASE_URL = "https://opencode.ai/zen/v1";
 
-// Static fallback used when the dynamic fetch fails.
+// Zen's backend rejects multi-turn requests unless replayed assistant messages
+// carry `reasoning_content` when thinking is enabled. pi needs this compat flag.
+const COMPAT = {
+  supportsReasoningEffort: false,
+  requiresReasoningContentOnAssistantMessages: true,
+};
+
+// Static fallback: used when the dynamic fetch fails.
 const FALLBACK_MODELS = [
   {
     id: "deepseek-v4-flash-free",
@@ -27,6 +34,7 @@ const FALLBACK_MODELS = [
     cost: { input: 0, output: 0, cacheRead: 0, cacheWrite: 0 },
     contextWindow: 128000,
     maxTokens: 16384,
+    compat: COMPAT,
   },
 ];
 
@@ -60,6 +68,7 @@ export default async function (pi: ExtensionAPI) {
           cost: { input: 0, output: 0, cacheRead: 0, cacheWrite: 0 },
           contextWindow: 128000,
           maxTokens: 16384,
+          compat: COMPAT,
         }));
       }
     }
