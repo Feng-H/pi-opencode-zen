@@ -1,6 +1,7 @@
 # pi-opencode-zen
 
 [![npm version](https://img.shields.io/npm/v/pi-opencode-zen.svg?color=blue)](https://www.npmjs.com/package/pi-opencode-zen)
+[![npm downloads](https://img.shields.io/npm/dt/pi-opencode-zen.svg?color=green)](https://www.npmjs.com/package/pi-opencode-zen)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 **[English](#how-it-works) | [简体中文](#中文说明)**
@@ -53,6 +54,7 @@ The pool rotates: new `-free` models appear automatically; individual models may
 ## 中文说明
 
 [![npm version](https://img.shields.io/npm/v/pi-opencode-zen.svg?color=blue)](https://www.npmjs.com/package/pi-opencode-zen)
+[![npm downloads](https://img.shields.io/npm/dt/pi-opencode-zen.svg?color=green)](https://www.npmjs.com/package/pi-opencode-zen)
 
 > 在 [pi](https://pi.dev) 中使用 [OpenCode Zen](https://opencode.ai/zen) 的**免费**模型（如 `nemotron-3.5-lightning-free`、`mimo-v2.5-free`）。无需 API key、无需注册、无需登录。
 
