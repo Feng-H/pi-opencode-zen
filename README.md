@@ -1,10 +1,21 @@
 # pi-opencode-zen
 
+[![npm version](https://img.shields.io/npm/v/pi-opencode-zen.svg?color=blue)](https://www.npmjs.com/package/pi-opencode-zen)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
 **[English](#how-it-works) | [简体中文](#中文说明)**
 
 > Use [OpenCode Zen](https://opencode.ai/zen)'s **free** models (e.g. `nemotron-3.5-lightning-free`, `mimo-v2.5-free`) inside the [pi](https://pi.dev) coding agent. No API key, no account, no login.
 
 ## Install
+
+Install via **npm** (recommended):
+
+```bash
+pi install npm:pi-opencode-zen
+```
+
+Or install directly from **GitHub**:
 
 ```bash
 pi install git:github.com/Feng-H/pi-opencode-zen
@@ -37,25 +48,29 @@ Fetched dynamically; only free models (id containing `-free`) are registered. Cu
 
 The pool rotates: new `-free` models appear automatically; individual models may be rate-limited or unavailable at any time — try another one.
 
-> ⚠️ npm versions ≤ 0.2.0 are **broken** (Zen added the `x-session-id` requirement; the old fallback model was retired). Install v0.3.0+ from GitHub.
-
-## Limitations
-
-- **Rate limited.** Free models share a public quota; not suitable for heavy/automated use.
-- **Best-effort.** Depends on a third-party free service that may change at any time (as the 2026-09 SessionID requirement showed).
-- **Costs are reported as zero**, since access is free.
-
 ---
 
 ## 中文说明
 
+[![npm version](https://img.shields.io/npm/v/pi-opencode-zen.svg?color=blue)](https://www.npmjs.com/package/pi-opencode-zen)
+
 > 在 [pi](https://pi.dev) 中使用 [OpenCode Zen](https://opencode.ai/zen) 的**免费**模型（如 `nemotron-3.5-lightning-free`、`mimo-v2.5-free`）。无需 API key、无需注册、无需登录。
 
-### 安装
+### 安装方式
+
+通过 **npm 官方镜像** 安装（推荐）：
+
+```bash
+pi install npm:pi-opencode-zen
+```
+
+或者直接从 **GitHub** 安装：
 
 ```bash
 pi install git:github.com/Feng-H/pi-opencode-zen
 ```
+
+- npm 官方包页面：[https://www.npmjs.com/package/pi-opencode-zen](https://www.npmjs.com/package/pi-opencode-zen)
 
 零配置 —— 装好后 pi 对话里 `/model` 切换,选 `opencode-zen` 下的免费模型即可。
 
@@ -83,8 +98,6 @@ OpenCode Zen 提供 OpenAI 兼容端点 `https://opencode.ai/zen/v1`。**2026-09
 | `deepseek-v4-flash-free` | — | **上游已下线** |
 
 免费池会轮换:新 `-free` 模型自动出现;个别模型可能随时限流或不可用 —— 换一个试即可。
-
-> ⚠️ npm 上 ≤ 0.2.0 的版本**已失效**（Zen 新增 x-session-id 要求,旧 fallback 模型已下线）。请装 GitHub v0.3.0+。
 
 ### 限制
 
